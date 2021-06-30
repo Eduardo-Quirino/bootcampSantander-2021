@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="edu35"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-29 07:00:43 "/>
+        <attribute name="created" value="ZWR1MzU7Tk9PVEJPT0tfRURVQVJEOzIwMjEtMDYtMjk7IjA2OjUzOjIwICI7Mjc2Ng=="/>
+        <attribute name="edited" value="ZWR1MzU7Tk9PVEJPT0tfRURVQVJEOzIwMjEtMDYtMjk7IjA2OjU4OjE4ICI7MTtlZHUzNTtOT09UQk9PS19FRFVBUkQ7MjAyMS0wNi0yOTsiMDY6Mzg6MTYgIjs1NzE5"/>
+        <attribute name="edited" value="ZWR1MzU7Tk9PVEJPT0tfRURVQVJEOzIwMjEtMDYtMjk7IjA3OjAwOjQzICI7MzsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="1"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="c" expression="3"/>
+            <output expression="a&lt;=b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

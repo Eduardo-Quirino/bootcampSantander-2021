@@ -1,0 +1,28 @@
+Aulas Atuais:
+(ALGORITIMOS: Tomadas de decisões e expressões)
+
+
+Crie um mapa mental para resolver um determinado ploblema, por exemplo, calcular a média aritimética de 4 notas, sabendo que as notas são as seguintes:
+
+Nota1 = 5
+Nota2 = 7
+Nota3 = 10
+Nota4 = 3 
+
+Nota1	Nota2	Nota3 	Nota4	Média
+5	7	10	3	22,75
+
+
+Algoritmo:um algoritmo é uma sequência de instruções ou comandos realizados de maneira sistemática com o objetivo de resolver um problema ou executar uma tarefa.
+
+Pseudocódigo: é uma forma genérica de escrever um algoritmo, utilizando uma linguagem simples (nativa a quem o escreve, de forma a ser entendida por qualquer pessoa) sem necessidade de conhecer a sintaxe de nenhuma linguagem de programação.
+
+fluxograma:é um conjunto de símbolos que são utilizados para representar graficamente as etapas de um procedimento criando, assim, uma sequência de passos para a realização do mesmo. O objetivo do fluxograma é facilitar a compreensão do processo a partir do desenho de cada um de seus estágios.
+
+Variáveis:uma variável é um objeto (uma posição,frequente localizada na memória)capaz de reter e representar um vlor ou expressão.
+
+Constante:é um valor que permanece sem nunhuma alteração no decorrer do programa, um exemplo 
+INICIO
+DECLARA pi=3,14
+DECLARA raio:número
+FIM
