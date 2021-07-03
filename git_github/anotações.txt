@@ -1,0 +1,113 @@
+Aulas : Git
+-------------------------------------------------------------------------------
+NO TERMINAL CMD (Windows)
+
+-Mudar de pastas **cd** / navega entre as pastas
+
+-Subir um nível a cima: **cd..**
+
+-Limpar tela: **cls** limpa a tela do terminal
+
+-Listar as pastas : **dir** lista as pastas no diretório
+
+-Criar pasta / arquivos : **mkdir** nome da pasta para criar 
+
+-Deletar arquivos / pasta : **del** / **rmdir** e nome da pasta para criar
+del: exclui somente o arquivo / rmdir: exclui a pasta do diretório 
+
+​                     --------------------------------------xxx--------------------------------------                      
+
+O TERMINAL Unix(Linux)
+
+-Mudar de pastas : cd  
+-Listar as pastas : ls 
+-Criar pasta / arquivos :mkdir
+-Deletar pasta/arquivos : rm / rf
+
+​                     --------------------------------------xxx--------------------------------------                     
+
+-Sha1:(Secure Hash Algorifhm) Algoritmo de Hash Seguro é um conjunto de funções hash criptográficas projetadas pela NSA(Agência de Segurança Nacional dos EUA).
+
+-Objetos fundamentais :Blobs - contem metadados, Trees - armazenam blobs, Commits-armazena todas elas.
+
+-Sistema distribuição
+
+-Segurança
+
+​              --------------------------------------xxx-------------------------------------- 
+
+*Primeiros Comandos* 
+
+-Iniciando o git  : git init, git add, git commit
+-Iniciar o versionamento
+-Criar um commit
+
+1 **git add *** - adiciona todas alterações
+
+1.1**git add**  - nome da pasta : adiciona apenas pasta descrita
+
+1.2 **git add.** - adiciona todas as alterações 
+
+2 **git commit -m** "comentário sobre alteração"
+                    --------------------------------------xxx--------------------------------------  
+
+#### **Markdown** - define o tamanho das palavras contidas(arquivos .md)
+
+# # = h1
+## ## = h2 
+### ### = h3 
+#### #### = h4 
+##### ##### = h5 
+###### ###### = h6 
+
+**negrito** = ** + **
+_itálico_ = _ + _
+
+​                    --------------------------------------xxx--------------------------------------  
+
+### Passo a passo no ciclo de vida 
+
+### git init :Tracked ou Untracked
+
+##### **Tracked** - arquivos que o git tem ciência 
+
+#####  **Untracked** - Unmodified, Modified, Staged
+
+***criando pasta e movendo***
+
+==> mkdir  "nome da pasta"
+
+==> mv "nome da pasta" ./   .nome da nova pasta
+
+​                    --------------------------------------xxx--------------------------------------  
+
+### **Trabalhando com github** 
+
+**git config --global** : cria configuração global no git
+
+**git config --list** : lista as configurações do git
+
+ **Alterando uma configuração** 
+
+git config --global --unset user.email : apaga configuração email 
+
+git config --global --unset user.name : apaga configuração nome usuário 
+
+q : sai do looping
+
+### **Adicionar pasta local no github**
+
+git remote add origin " link da pasta criada no git "
+
+git remote -v : mostra a lista remotas cadastradas
+
+git push origin master : envia a pasta local para pasta remota do github
+
+​                    --------------------------------------xxx--------------------------------------  
+
+**Resolvendo conflitos**
+
+**git pull origin master** : traz arquivo do git e compara com arquivos locais na pasta  
+
+ 
+
