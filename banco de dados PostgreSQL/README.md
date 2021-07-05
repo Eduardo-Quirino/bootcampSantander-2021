@@ -81,10 +81,19 @@
 
 ### ***Criando banco 🎲***
 
-1. seleciona SERVERS
+*Primeiro passo:*
+
+1. selecione SERVERS
+
 2. Object ➡️ Create ➡️ Server Group
-3. Seleciona banco criado ➡️ Object ➡️ Create ➡️ Server
-4. seleciona após criado **postigres**, barra lateral esquerda ➡️ tools **Query tool**
+
+   *Segundo passo:*
+
+3. Seleciona banco criado ➡️ Object ➡️ Create ➡️ Server 
+
+   OBS: nome em conexão é (127.0.0.1)
+
+4. seleciona após criado **postigres**, barra lateral esquerda ➡️ tools **Query tool** 
 
 ### ***Usuários*** 
 
@@ -170,6 +179,8 @@
 
 *DDL:* data definition language (DDL), linguagem de definição de dados - CRIATE, ALTER, DROP.
 
-***COMANDOS*** (34:10:00)
+***COMANDOS*** 
 
-1. 
+1. limpar tela: **\\! cls** 
+2. 
+
