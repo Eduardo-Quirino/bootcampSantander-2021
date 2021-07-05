@@ -156,3 +156,20 @@
 
      
 
+*DATABASE:* é o banco de dados. Grupo de schemas e seus objetos, como types , views, funções, entre outros. Seus schemas e objetos não podem ser compartilhados apenas usuários / roles e configurações do cluster PostgreSQL .
+
+*SCHEMA:* é um grupo de objetos, como tabelas, types, views, funções, entre outros. É possível relacionar objetos entre diversos schemas.
+
+*OBJETOS:* são as tabelas, views, funções, types, sequences, entre outros pertencentes aos schemas. 
+
+*TABELA:* é um conjunto de dados dispostos  em colunas e linhas referentes a um objeto comum.
+
+*COLUNAS:* são considerados como "campos da tabela", como atributos da tabela.
+
+*DML :* data manipulation language(DML), linguagem de manipulação de dados - INSERT, UPDATE, DELETE, SELECT.
+
+*DDL:* data definition language (DDL), linguagem de definição de dados - CRIATE, ALTER, DROP.
+
+***COMANDOS*** (34:10:00)
+
+1. 
