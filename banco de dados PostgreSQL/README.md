@@ -140,8 +140,14 @@
      **Consulta pelo terminal**
 
      - lista todas as no banco de dados ' *roles criadas* **\du** ' 
+
      - mostra todas as rodes disponíveis dentro da role '**select * from pg_roles ;** ' 
+
      - **\q** sai do terminal
+
+     - ***COMANDOS*** 
+
+       limpar tela: **\\! cls** 
 
 3. *Administrando acessos (GRANT)*
 
@@ -175,12 +181,163 @@
 
 *COLUNAS:* são considerados como "campos da tabela", como atributos da tabela.
 
-*DML :* data manipulation language(DML), linguagem de manipulação de dados - INSERT, UPDATE, DELETE, SELECT.
+*DML:* data manipulation language(DML), linguagem de manipulação de dados - INSERT, UPDATE, DELETE, SELECT.
 
 *DDL:* data definition language (DDL), linguagem de definição de dados - CRIATE, ALTER, DROP.
 
-***COMANDOS*** 
+**DML** / **CRUD:**  utilizado com condições de uso na tabela
 
-1. limpar tela: **\\! cls** 
-2. 
+**TRUNCATE:** esvazia tabela
+
+
+
+## **Comandos de Seleção**
+
+> ***Selecionar banco SELECT:*** parâmetro, parâmetro FROM tabela;
+>
+> **Ex: SELECT numero, nome FROM banco;**
+>
+> ***Selecionar todo o banco:*** SELECT * FROM nome da tabela
+>
+> ***Informação do conteúdo da tabela:*** SELECT * FROM information_schema.columns  WHERE table_name = 'banco';
+>
+> ***Informação das colunas:*** SELECT * FROM information_schema.columns  WHERE table_name = 'banco';
+
+## *Funções agregadas*
+
+***AVG*** - média da tabela
+
+- select * from inf da tabela ;  ➡️  ex: select * from cliente_transacoes;  **OU** select avg (valor) from cliente_transacoes;
+
+***COUNT (opção: HAVING)*** - contagem de dados
+
+- select count (numero)
+  from cliente;  **OU** 
+
+  > select count (numero),email
+  > from cliente
+  > where email ilike '%gmail.com'
+  > group by email;
+
+
+
+***MAX*** - traz o maior número 
+
+EX:
+
+> select max (valor)
+> from cliente_transacoes;
+
+**OU**
+
+>select max (valor),tipo_transacao_id
+>from cliente_transacoes
+>group by tipo_transacao_id;
+
+***MIN*** - traz o menor número 
+
+EX:
+
+> select min (valor)
+> from cliente_transacoes;  
+
+**OU** 
+
+> select min (valor),tipo_transacao_id
+> from cliente_transacoes
+> group by tipo_transacao_id;
+
+***SUM*** - soma de todos os registros 
+
+>select sum (valor)
+>from cliente_transacoes;
+
+**OU**
+
+> select sum (valor),tipo_transacao_id
+> from cliente_transacoes
+> group by tipo_transacao_id;
+
+E TAMBÉM
+
+>select sum (valor),tipo_transacao_id
+>from cliente_transacoes
+>group by tipo_transacao_id
+>order by tipo_transacao_id desc;
+
+## **JOINs**
+
+- JOIN (INNER) - seleciona os dados pertencentes a tabelas diferentes 
+
+  >SELECT tabela1_.campos , tabela_2.campos
+  >
+  >FROM tabela_1
+  >
+  >JOIN tabela_2
+  >
+  >ON tabela_2.campo = tabela_1.campo
+
+  
+
+- LEFT JOIN (OUTER) - relaciona registros da esquerda para direita de tabelas A e B se houver 
+
+  >SELECT tabela_1.campos, tabela_2.campos
+  >
+  >FROM tabela_1
+  >
+  >LEFT JOIN tabela_2
+  >
+  >ON tabela_2.campo = tabela_1.campo
+
+  
+
+- RINGHT JOIN(OUTER) -  relaciona registros da direita para esquerda de tabelas A e B se houver
+
+  >SELECT tabela_1.campo, tabela_2.campo
+  >
+  >FROM tabela_1
+  >
+  >RIGHT JOIN tabela_2
+  >
+  >ON tabela_2.campo = tabela_1.campo
+
+  
+
+- FULL JOIN (OUTER) - traz todas as relações possíveis
+
+  >SELECT tabela_1.campos, tabela_2.campos
+  >
+  >FROM tabela_1
+  >
+  >FULL JOIN tabela_2
+  >
+  >ON tabela_2.campo = tabela_1.campo
+  >
+  >
+
+- CROSS JOIN - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
