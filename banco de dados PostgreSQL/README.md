@@ -57,17 +57,17 @@
 ***comandos administrativos*** : Binários do PostgreSQL
 
 -  creatdb
-- createuser
-- dropdb
-- dropuser
-- initdb
-- pg_ctl
-- pg_basebackup
-- pg_dump / pg_dumpall
-- pg_restore
-- psql
-- reindexdb
-- vacuumdb 
+-  createuser
+-  dropdb
+-  dropuser
+-  initdb
+-  pg_ctl
+-  pg_basebackup
+-  pg_dump / pg_dumpall
+-  pg_restore
+-  psql
+-  reindexdb
+-  vacuumdb 
 
 **Cluster :**  "ARQUITETURA / HIERARQUIA"- coleção de banco de dados que compartilham as mesmas configurações (arquivos de configurações📂) do PostgreSQL e do sistema operacional (porta, listen_addresses, etc...)
 
@@ -267,7 +267,7 @@ E TAMBÉM
 
 ## **JOINs**
 
-- JOIN (INNER) - seleciona os dados pertencentes a tabelas diferentes 
+- *JOIN (INNER)* - seleciona os dados pertencentes a tabelas diferentes 
 
   >SELECT tabela1_.campos , tabela_2.campos
   >
@@ -279,7 +279,7 @@ E TAMBÉM
 
   
 
-- LEFT JOIN (OUTER) - relaciona registros da esquerda para direita de tabelas A e B se houver 
+- *LEFT JOIN (OUTER)* - relaciona registros da esquerda para direita de tabelas A e B se houver 
 
   >SELECT tabela_1.campos, tabela_2.campos
   >
@@ -291,7 +291,7 @@ E TAMBÉM
 
   
 
-- RINGHT JOIN(OUTER) -  relaciona registros da direita para esquerda de tabelas A e B se houver
+- *RINGHT JOIN(OUTER)* -  relaciona registros da direita para esquerda de tabelas A e B se houver
 
   >SELECT tabela_1.campo, tabela_2.campo
   >
@@ -303,7 +303,7 @@ E TAMBÉM
 
   
 
-- FULL JOIN (OUTER) - traz todas as relações possíveis
+- *FULL JOIN (OUTER)* - traz todas as relações possíveis
 
   >SELECT tabela_1.campos, tabela_2.campos
   >
@@ -315,7 +315,120 @@ E TAMBÉM
   >
   >
 
-- CROSS JOIN - 
+- *CROSS JOIN* -  todos os dados de uma tabela serão cruzados com todos os dados da tabela referente no CROSS JOIN criando uma matriz
+
+  
+
+  Exemplo de JOIN
+
+  >SELECT tabela_1.campos, tabela_2.campos
+  >
+  >FROM tabela_1
+  >
+  >CROSS JOIN tabela_2
+
+  >select 
+  >banco.nome,
+  >agencia.nome,
+  >conta_corrente.numero, 
+  >conta_corrente.digito,
+  >cliente.nome
+  >from banco
+  >join agencia on agencia.banco_numero = banco.numero
+  >join conta_corrente 
+  >on conta_corrente.banco_numero = banco.numero
+  >and conta_corrente.agencia_numero = agencia_numero
+  >join cliente
+  >	on cliente.numero = conta_corrente.cliente_numero;
+  >
+  >
+
+  
+
+  ## ***CTE - Common Table Expressions***
+
+Forma auxiliar de organizar "statements", ou seja blocos de códigos, para consultar muito grandes, gerando tabelas temporárias e criando relacionamento entre elas.
+
+Dentro dos statements podem ter SELECTs, INSERTs, UPDATEs ou DELETEs.
+
+>WITH [nome1] AS (
+>
+>SELECT (campos,)
+>
+>FROM tabela_A
+>
+>[WHERE]
+>
+>),[nome2] AS(
+>
+>SELECET (campo,)
+>
+>FROM tabela_B
+>
+>[WRERE]
+>
+>)
+>
+>SELECT [nome1].(campo,) , [nome2] . (campos,)
+>
+>FROM [nome1]
+>
+>JOIN [nome2]...
+
+
+
+## ***Views***
+
+São visões .
+
+São "camadas" para as tabelas.
+
+São "alias" para uma ou mais queries.
+
+Aceitam comandos de *SELECT*, *INSERT*, *UPDATE* E *DELETE*.
+
+> CREATE [ OR REPLACE ]  [ TEMP | TEMPORARY ] [ RECURSIVE ] VIEW name [ (column_name[ ,... ] ) ]
+>
+> AS query
+>
+> [ WITH [ CASCADED | LOCAL ] CHECK OPTION ]
+
+
+
+## ***Transações***
+
+Conceito fundamental de todos os sistemas de banco de dados.
+
+Conceito de múltiplas etapas / códigos reunidos em apenas 1 transação, onde o resultado precisa ser **tudo ou nada**.
+
+Exemplo:
+
+> **BEGIN;**
+>
+> UPDATE conta SET valor = valor -100.00
+>
+> WHERE nome = 'Alice'
+>
+> UPDATE conta SET valor = valor + 100.00
+>
+> WHERE nome = 'Bob';
+>
+> **COMMIT;** | **ROLLBACK;**
+
+
+
+## **Funções**
+
+Conjunto de códigos que são executados **dentro de uma transação** com a finalidade de facilitar a programação e obter o reaproveitamento / reutilização de códigos.
+
+Existem 4 tipos de funções:
+
+- query language functions (funções escritas em SQL)
+- procedural language functions (funções escritas em, po exemplo, PL/pgSQL ou PL/py ) 
+- internal functions 
+- C - language functions 
+
+
 
 
 
