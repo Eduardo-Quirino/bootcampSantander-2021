@@ -424,27 +424,74 @@ Conjunto de códigos que são executados **dentro de uma transação** com a fin
 Existem 4 tipos de funções:
 
 - query language functions (funções escritas em SQL)
+
 - procedural language functions (funções escritas em, po exemplo, PL/pgSQL ou PL/py ) 
+
 - internal functions 
+
 - C - language functions 
 
+  > CREATE [ OR REPLACE ] FUNCTION
+  >
+  > name ( [ [argmode ] [argname] argtype ] [  {DEFAULT | = } default_expr  ] [,...] )
+  >
+  > [ RETURNS rettype
+  >
+  > | RETURNS TABLE ( column_name column_type [ ,... ] ) ]
+  >
+  > { LANGUAGE lang_name 
+  >
+  > | TRANSFORM { FOR TYPE type_name } [ ,.. ]
+  >
+  > | WINDOW
+  >
+  > | IMMUTABLE | STABLE | COLATILE | [ NOT ] LEAKPROOF
+  >
+  > | CALLED ON NULL INPUT | RETURNS NULL ON NULL INPUT | STRICT
+  >
+  > | [ EXTERNAL ] SECURITY INVOKER | [ EXTERNAL ] SECURITY DEFINER
+  >
+  > | PARALLEL { UNSAFE  | RESTRICTED | SAFE }
+  >
+  > | COST execution_cost
+  >
+  > | ROWS result_rows 
+  >
+  > | SET configuration_parameter { TO value | = value | FROM CURRENT }
+  >
+  > | AS ' definition '
+  >
+  > AS ' obj_file ', ' link_symbol '
+  >
+  > }...
 
+- ## *Idempotência*
 
+  CREATE **OR REPLACE** FUNCTION [nome da função]
 
+  - mesmo nome
 
+  - mesmo tipo de retorno
 
+  - mesmo número de parâmetros / argumentos
 
+- ## *Returns*
 
+  - Tipo de retorno (data type)
+  - INTERGER
+  - CHAR / VARCHAR
+  - BOOLEAN
+  - ROW
+  - TABLE
+  - JSON
 
+## *Segurança*
 
+- **SECURITY**
 
+  - INVOKER - permite que usuário em execução altere o banco de dados
 
-
-
-
-
-
-
+  - DEFINER -não permite que usuário em execução altere o banco de dados
 
 
 
